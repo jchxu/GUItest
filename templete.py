@@ -13,12 +13,12 @@ class MyWindows(QtWidgets.QMainWindow,Ui_MainWindow):
 
 ######## Slot functions #############
 
-    def btn_click(self):
-        price=self.price_box.toPlainText()
-        #self.results_window.setText("hi,PyQt5~")
-        rate = self.tax_rate.value()
-        self.results_window.setText(price*rate)
-        #self.label.text(price*rate)
+    def btn_click(self):    # 按钮单击后的操作
+        test=self.price_box.toPlainText()       # 读取名为"price_box"的EditText文本框的内容
+        self.results_window.setText("fhdsfsj")  # 更改名为"results_window"的EditText文本框的内容
+        rate = self.tax_rate.value()            # 读取名为"tax_rate"的范围选择框的内容
+
+
 ######################################
 
 
