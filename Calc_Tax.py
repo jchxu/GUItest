@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.11.2
 #
 # WARNING! All changes made in this file will be lost!
-
+import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
@@ -78,3 +78,28 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Tax Rate"))
         self.calc_tax_button.setText(_translate("MainWindow", "Calculate Tax"))
 
+
+
+class MyWindows(QtWidgets.QMainWindow,Ui_MainWindow):
+    def __init__(self):
+        super(MyWindows, self).__init__()
+        self.setupUi(self)
+
+
+######## Slot functions #############
+
+    def btn_click(self):
+        price = self.price_box.toPlainText()
+        #self.results_window.setText("hi,PyQt5~")
+        rate = self.tax_rate.value()
+        self.results_window.setText(price*rate)
+        #self.label.text(price*rate)
+######################################
+
+
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    window = MyWindows()
+    window.show()
+    sys.exit(app.exec_())
