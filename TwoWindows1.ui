@@ -55,7 +55,7 @@
      <number>0</number>
     </property>
     <property name="text">
-     <string>This is 1st Window!</string>
+     <string>这是第一个窗口！</string>
     </property>
    </widget>
   </widget>

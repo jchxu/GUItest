@@ -40,12 +40,12 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-#        self.btn.clicked.connect(MainWindow.btn_click)
+        #self.btn.clicked.connect(MainWindow.btn_click)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btn.setText(_translate("MainWindow", "Enter 2nd Window"))
-        self.label.setText(_translate("MainWindow", "This is 1st Window!"))
+        self.label.setText(_translate("MainWindow", "这是第一个窗口！"))
 
