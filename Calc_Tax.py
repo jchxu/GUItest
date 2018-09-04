@@ -89,10 +89,11 @@ class MyWindows(QtWidgets.QMainWindow,Ui_MainWindow):
 ######## Slot functions #############
 
     def btn_click(self):
-        price = self.price_box.toPlainText()
+        price = float(self.price_box.toPlainText())
         #self.results_window.setText("hi,PyQt5~")
-        rate = self.tax_rate.value()
-        self.results_window.setText(price*rate)
+        rate = (self.tax_rate.value())
+        result = "Price * Rate = " + str(price*rate)
+        self.results_window.setText(result)
         #self.label.text(price*rate)
 ######################################
 
